@@ -77,9 +77,12 @@
       <section id="pipeline" class="view">
         <div class="board-toolbar">
           <label>Industry
-            <input id="pipelineIndustryFilter" list="industries" placeholder="All industries or type custom..." />
+            <select id="pipelineIndustryFilter"><option value="">All Industries</option></select>
           </label>
-          <small>Choose from common industries, or type your own wording to filter the board.</small>
+          <label id="pipelineIndustryCustomLabel" class="hidden">Custom Industry
+            <input id="pipelineIndustryCustom" placeholder="Type custom industry wording..." />
+          </label>
+          <small>Choose from the dropdown, or select Custom to type your own wording.</small>
         </div>
         <div class="board-note">Drag-and-drop updates the stage only. Probability stays unchanged unless the deal is moved to Won (100%) or Lost (0%).</div>
         <div id="kanban" class="kanban"></div>
@@ -105,11 +108,11 @@
         <label>Contact Person<input id="contact" required /></label>
         <label>Phone<input id="phone" /></label>
         <label>Email<input id="email" type="email" /></label>
-        <label>Industry<input id="industry" list="industries" placeholder="Select or type custom industry" /></label>
+        <label>Industry<select id="industrySelect"></select></label>
+        <label id="industryCustomLabel" class="hidden">Custom Industry<input id="industry" placeholder="Type custom industry wording" /></label>
         <label>Lead Source<select id="source"><option>Referral</option><option>Website</option><option>LinkedIn</option><option>Cold Call</option><option>Event</option><option>Existing Client</option><option>Partner</option><option>Others</option></select></label>
         <label>Deal Owner<input id="owner" list="owners" required /></label>
         <datalist id="owners"></datalist>
-        <datalist id="industries"></datalist>
         <label>Stage<select id="stage"></select></label>
         <label>Deal Value<input id="value" type="number" min="0" step="100" placeholder="Leave blank if prospecting" /></label>
         <label>Probability %<input id="probability" type="number" min="0" max="100" step="5" placeholder="Leave blank if prospecting" /></label>

@@ -34,8 +34,8 @@ For a team-shared version, the next upgrade should connect this same UI to Supab
 ## Upgrade notes
 
 - Deal cards can now be moved by drag-and-drop between Pipeline Board columns.
-- Pipeline Board now has an Industry filter with a broad list of common industries plus dropdown suggestions from existing deals; users can also type custom industry wording.
-- Add/Edit Deal industry input now supports dropdown suggestions while still allowing custom wording.
+- Pipeline Board now has a visible Industry select dropdown with a broad list of common industries plus existing deal industries; users can choose Custom / Others to type their own wording.
+- Add/Edit Deal industry now uses the same visible Industry select dropdown, with Custom / Others for free-text wording.
 - Drag-and-drop changes the stage only; probability is preserved for normal stages and only auto-set for Won (100%) or Lost (0%).
 - Add Deal supports Prospecting by leaving Deal Value and/or Probability % blank. Blank values are excluded from pipeline value/forecast until updated.
 - Lead Source now includes Others.
